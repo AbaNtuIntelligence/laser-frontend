@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: laser-frontend
+    runtime: static
+    buildCommand: npm ci && npm run build
+    staticPublishPath: out
+    envVars:
+      - key: NODE_VERSION
+        value: 24.19.0
+      - key: NEXT_PUBLIC_API_URL
+        sync: false
